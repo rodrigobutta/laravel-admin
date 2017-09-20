@@ -1,14 +1,14 @@
 {
     "name": "rodrigobutta/laravel-admin",
-    "description": "laravel admin rodrigobutta v2.0",
+    "description": "laravel-admin remake by rodrigobutta",
     "type": "library",
     "keywords": ["laravel", "admin", "grid", "form"],
     "homepage": "https://github.com/z-song/laravel-admin",
     "license": "MIT",
     "authors": [
         {
-            "name": "zsong",
-            "email": "zosong@126.com"
+            "name": "rodrigobutta",
+            "email": "rbutta@gmail.com"
         }
     ],
     "require": {
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\Admin\\": "src/"
+            "RodrigoButta\\Admin\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\Admin\\AdminServiceProvider"
+                "RodrigoButta\\Admin\\AdminServiceProvider"
             ],
             "aliases": {
-                "Admin": "Encore\\Admin\\Facades\\Admin"
+                "Admin": "RodrigoButta\\Admin\\Facades\\Admin"
             }
 
         }

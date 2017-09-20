@@ -1,11 +1,11 @@
 <?php
 
-namespace Encore\Admin\Controllers;
+namespace RodrigoButta\Admin\Controllers;
 
-use Encore\Admin\Auth\Database\Administrator;
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Form;
-use Encore\Admin\Layout\Content;
+use RodrigoButta\Admin\Auth\Database\Administrator;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Form;
+use RodrigoButta\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;

@@ -1,7 +1,7 @@
 <?php
 
-use Encore\Admin\Auth\Database\Administrator;
-use Encore\Admin\Auth\Database\Role;
+use RodrigoButta\Admin\Auth\Database\Administrator;
+use RodrigoButta\Admin\Auth\Database\Role;
 
 class RolesTest extends TestCase
 {

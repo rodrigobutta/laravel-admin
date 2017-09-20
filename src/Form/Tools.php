@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Form;
+namespace RodrigoButta\Admin\Form;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Form;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Form;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Collection;

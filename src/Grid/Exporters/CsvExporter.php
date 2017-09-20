@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Grid\Exporters;
+namespace RodrigoButta\Admin\Grid\Exporters;
 
 use Illuminate\Support\Arr;
 

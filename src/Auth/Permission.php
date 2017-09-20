@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Auth;
+namespace RodrigoButta\Admin\Auth;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Middleware\Pjax;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Middleware\Pjax;
 use Illuminate\Support\Facades\Auth;
 
 class Permission

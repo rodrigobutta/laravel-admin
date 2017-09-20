@@ -1,12 +1,12 @@
 <?php
 
-namespace Encore\Admin\Grid\Filter;
+namespace RodrigoButta\Admin\Grid\Filter;
 
-use Encore\Admin\Grid\Filter;
-use Encore\Admin\Grid\Filter\Field\DateTime;
-use Encore\Admin\Grid\Filter\Field\MultipleSelect;
-use Encore\Admin\Grid\Filter\Field\Select;
-use Encore\Admin\Grid\Filter\Field\Text;
+use RodrigoButta\Admin\Grid\Filter;
+use RodrigoButta\Admin\Grid\Filter\Field\DateTime;
+use RodrigoButta\Admin\Grid\Filter\Field\MultipleSelect;
+use RodrigoButta\Admin\Grid\Filter\Field\Select;
+use RodrigoButta\Admin\Grid\Filter\Field\Text;
 
 abstract class AbstractFilter
 {

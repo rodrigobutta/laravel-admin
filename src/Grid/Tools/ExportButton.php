@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Grid\Tools;
+namespace RodrigoButta\Admin\Grid\Tools;
 
-use Encore\Admin\Admin;
-use Encore\Admin\Grid;
+use RodrigoButta\Admin\Admin;
+use RodrigoButta\Admin\Grid;
 
 class ExportButton extends AbstractTool
 {
@@ -26,12 +26,12 @@ class ExportButton extends AbstractTool
 
 $('.export-selected').click(function (e) {
     e.preventDefault();
-    
+
     var rows = selectedRows().join(',');
     if (!rows) {
         return false;
     }
-    
+
     var href = $(this).attr('href').replace('__rows__', rows);
     location.href = href;
 });

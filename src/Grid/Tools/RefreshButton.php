@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Grid\Tools;
+namespace RodrigoButta\Admin\Grid\Tools;
 
-use Encore\Admin\Admin;
+use RodrigoButta\Admin\Admin;
 
 class RefreshButton extends AbstractTool
 {

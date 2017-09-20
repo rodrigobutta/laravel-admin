@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Grid;
+namespace RodrigoButta\Admin\Grid;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Grid\Filter\AbstractFilter;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Grid\Filter\AbstractFilter;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Request;
 
@@ -236,7 +236,7 @@ EOT;
     public function __call($method, $arguments)
     {
         if (in_array($method, $this->supports)) {
-            $className = '\\Encore\\Admin\\Grid\\Filter\\'.ucfirst($method);
+            $className = '\\RodrigoButta\\Admin\\Grid\\Filter\\'.ucfirst($method);
 
             return $this->addFilter(new $className(...$arguments));
         }

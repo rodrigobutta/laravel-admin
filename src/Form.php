@@ -1,14 +1,14 @@
 <?php
 
-namespace Encore\Admin;
+namespace RodrigoButta\Admin;
 
 use Closure;
-use Encore\Admin\Exception\Handler;
-use Encore\Admin\Form\Builder;
-use Encore\Admin\Form\Field;
-use Encore\Admin\Form\Field\File;
-use Encore\Admin\Form\Row;
-use Encore\Admin\Form\Tab;
+use RodrigoButta\Admin\Exception\Handler;
+use RodrigoButta\Admin\Form\Builder;
+use RodrigoButta\Admin\Form\Field;
+use RodrigoButta\Admin\Form\Field\File;
+use RodrigoButta\Admin\Form\Row;
+use RodrigoButta\Admin\Form\Tab;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Http\Request;
@@ -1196,52 +1196,52 @@ class Form
     public static function registerBuiltinFields()
     {
         $map = [
-            'button'            => \Encore\Admin\Form\Field\Button::class,
-            'checkbox'          => \Encore\Admin\Form\Field\Checkbox::class,
-            'color'             => \Encore\Admin\Form\Field\Color::class,
-            'currency'          => \Encore\Admin\Form\Field\Currency::class,
-            'date'              => \Encore\Admin\Form\Field\Date::class,
-            'dateRange'         => \Encore\Admin\Form\Field\DateRange::class,
-            'datetime'          => \Encore\Admin\Form\Field\Datetime::class,
-            'dateTimeRange'     => \Encore\Admin\Form\Field\DatetimeRange::class,
-            'datetimeRange'     => \Encore\Admin\Form\Field\DatetimeRange::class,
-            'decimal'           => \Encore\Admin\Form\Field\Decimal::class,
-            'display'           => \Encore\Admin\Form\Field\Display::class,
-            'divider'           => \Encore\Admin\Form\Field\Divide::class,
-            'divide'            => \Encore\Admin\Form\Field\Divide::class,
-            'embeds'            => \Encore\Admin\Form\Field\Embeds::class,
-            'editor'            => \Encore\Admin\Form\Field\Editor::class,
-            'email'             => \Encore\Admin\Form\Field\Email::class,
-            'file'              => \Encore\Admin\Form\Field\File::class,
-            'hasMany'           => \Encore\Admin\Form\Field\HasMany::class,
-            'hidden'            => \Encore\Admin\Form\Field\Hidden::class,
-            'id'                => \Encore\Admin\Form\Field\Id::class,
-            'image'             => \Encore\Admin\Form\Field\Image::class,
-            'ip'                => \Encore\Admin\Form\Field\Ip::class,
-            'map'               => \Encore\Admin\Form\Field\Map::class,
-            'mobile'            => \Encore\Admin\Form\Field\Mobile::class,
-            'month'             => \Encore\Admin\Form\Field\Month::class,
-            'multipleSelect'    => \Encore\Admin\Form\Field\MultipleSelect::class,
-            'number'            => \Encore\Admin\Form\Field\Number::class,
-            'password'          => \Encore\Admin\Form\Field\Password::class,
-            'radio'             => \Encore\Admin\Form\Field\Radio::class,
-            'rate'              => \Encore\Admin\Form\Field\Rate::class,
-            'select'            => \Encore\Admin\Form\Field\Select::class,
-            'slider'            => \Encore\Admin\Form\Field\Slider::class,
-            'switch'            => \Encore\Admin\Form\Field\SwitchField::class,
-            'text'              => \Encore\Admin\Form\Field\Text::class,
-            'textarea'          => \Encore\Admin\Form\Field\Textarea::class,
-            'time'              => \Encore\Admin\Form\Field\Time::class,
-            'timeRange'         => \Encore\Admin\Form\Field\TimeRange::class,
-            'url'               => \Encore\Admin\Form\Field\Url::class,
-            'year'              => \Encore\Admin\Form\Field\Year::class,
-            'html'              => \Encore\Admin\Form\Field\Html::class,
-            'tags'              => \Encore\Admin\Form\Field\Tags::class,
-            'icon'              => \Encore\Admin\Form\Field\Icon::class,
-            'multipleFile'      => \Encore\Admin\Form\Field\MultipleFile::class,
-            'multipleImage'     => \Encore\Admin\Form\Field\MultipleImage::class,
-            'captcha'           => \Encore\Admin\Form\Field\Captcha::class,
-            'listbox'           => \Encore\Admin\Form\Field\Listbox::class,
+            'button'            => \RodrigoButta\Admin\Form\Field\Button::class,
+            'checkbox'          => \RodrigoButta\Admin\Form\Field\Checkbox::class,
+            'color'             => \RodrigoButta\Admin\Form\Field\Color::class,
+            'currency'          => \RodrigoButta\Admin\Form\Field\Currency::class,
+            'date'              => \RodrigoButta\Admin\Form\Field\Date::class,
+            'dateRange'         => \RodrigoButta\Admin\Form\Field\DateRange::class,
+            'datetime'          => \RodrigoButta\Admin\Form\Field\Datetime::class,
+            'dateTimeRange'     => \RodrigoButta\Admin\Form\Field\DatetimeRange::class,
+            'datetimeRange'     => \RodrigoButta\Admin\Form\Field\DatetimeRange::class,
+            'decimal'           => \RodrigoButta\Admin\Form\Field\Decimal::class,
+            'display'           => \RodrigoButta\Admin\Form\Field\Display::class,
+            'divider'           => \RodrigoButta\Admin\Form\Field\Divide::class,
+            'divide'            => \RodrigoButta\Admin\Form\Field\Divide::class,
+            'embeds'            => \RodrigoButta\Admin\Form\Field\Embeds::class,
+            'editor'            => \RodrigoButta\Admin\Form\Field\Editor::class,
+            'email'             => \RodrigoButta\Admin\Form\Field\Email::class,
+            'file'              => \RodrigoButta\Admin\Form\Field\File::class,
+            'hasMany'           => \RodrigoButta\Admin\Form\Field\HasMany::class,
+            'hidden'            => \RodrigoButta\Admin\Form\Field\Hidden::class,
+            'id'                => \RodrigoButta\Admin\Form\Field\Id::class,
+            'image'             => \RodrigoButta\Admin\Form\Field\Image::class,
+            'ip'                => \RodrigoButta\Admin\Form\Field\Ip::class,
+            'map'               => \RodrigoButta\Admin\Form\Field\Map::class,
+            'mobile'            => \RodrigoButta\Admin\Form\Field\Mobile::class,
+            'month'             => \RodrigoButta\Admin\Form\Field\Month::class,
+            'multipleSelect'    => \RodrigoButta\Admin\Form\Field\MultipleSelect::class,
+            'number'            => \RodrigoButta\Admin\Form\Field\Number::class,
+            'password'          => \RodrigoButta\Admin\Form\Field\Password::class,
+            'radio'             => \RodrigoButta\Admin\Form\Field\Radio::class,
+            'rate'              => \RodrigoButta\Admin\Form\Field\Rate::class,
+            'select'            => \RodrigoButta\Admin\Form\Field\Select::class,
+            'slider'            => \RodrigoButta\Admin\Form\Field\Slider::class,
+            'switch'            => \RodrigoButta\Admin\Form\Field\SwitchField::class,
+            'text'              => \RodrigoButta\Admin\Form\Field\Text::class,
+            'textarea'          => \RodrigoButta\Admin\Form\Field\Textarea::class,
+            'time'              => \RodrigoButta\Admin\Form\Field\Time::class,
+            'timeRange'         => \RodrigoButta\Admin\Form\Field\TimeRange::class,
+            'url'               => \RodrigoButta\Admin\Form\Field\Url::class,
+            'year'              => \RodrigoButta\Admin\Form\Field\Year::class,
+            'html'              => \RodrigoButta\Admin\Form\Field\Html::class,
+            'tags'              => \RodrigoButta\Admin\Form\Field\Tags::class,
+            'icon'              => \RodrigoButta\Admin\Form\Field\Icon::class,
+            'multipleFile'      => \RodrigoButta\Admin\Form\Field\MultipleFile::class,
+            'multipleImage'     => \RodrigoButta\Admin\Form\Field\MultipleImage::class,
+            'captcha'           => \RodrigoButta\Admin\Form\Field\Captcha::class,
+            'listbox'           => \RodrigoButta\Admin\Form\Field\Listbox::class,
         ];
 
         foreach ($map as $abstract => $class) {

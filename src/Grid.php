@@ -1,17 +1,17 @@
 <?php
 
-namespace Encore\Admin;
+namespace RodrigoButta\Admin;
 
 use Closure;
-use Encore\Admin\Exception\Handler;
-use Encore\Admin\Grid\Column;
-use Encore\Admin\Grid\Displayers\Actions;
-use Encore\Admin\Grid\Displayers\RowSelector;
-use Encore\Admin\Grid\Exporter;
-use Encore\Admin\Grid\Filter;
-use Encore\Admin\Grid\Model;
-use Encore\Admin\Grid\Row;
-use Encore\Admin\Grid\Tools;
+use RodrigoButta\Admin\Exception\Handler;
+use RodrigoButta\Admin\Grid\Column;
+use RodrigoButta\Admin\Grid\Displayers\Actions;
+use RodrigoButta\Admin\Grid\Displayers\RowSelector;
+use RodrigoButta\Admin\Grid\Exporter;
+use RodrigoButta\Admin\Grid\Filter;
+use RodrigoButta\Admin\Grid\Model;
+use RodrigoButta\Admin\Grid\Row;
+use RodrigoButta\Admin\Grid\Tools;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -29,7 +29,7 @@ class Grid
     /**
      * The grid data model instance.
      *
-     * @var \Encore\Admin\Grid\Model
+     * @var \RodrigoButta\Admin\Grid\Model
      */
     protected $model;
 
@@ -92,7 +92,7 @@ class Grid
     /**
      * The grid Filter.
      *
-     * @var \Encore\Admin\Grid\Filter
+     * @var \RodrigoButta\Admin\Grid\Filter
      */
     protected $filter;
 
@@ -895,19 +895,19 @@ class Grid
     public static function registerColumnDisplayer()
     {
         $map = [
-            'editable'      => \Encore\Admin\Grid\Displayers\Editable::class,
-            'switch'        => \Encore\Admin\Grid\Displayers\SwitchDisplay::class,
-            'switchGroup'   => \Encore\Admin\Grid\Displayers\SwitchGroup::class,
-            'select'        => \Encore\Admin\Grid\Displayers\Select::class,
-            'image'         => \Encore\Admin\Grid\Displayers\Image::class,
-            'label'         => \Encore\Admin\Grid\Displayers\Label::class,
-            'button'        => \Encore\Admin\Grid\Displayers\Button::class,
-            'link'          => \Encore\Admin\Grid\Displayers\Link::class,
-            'badge'         => \Encore\Admin\Grid\Displayers\Badge::class,
-            'progressBar'   => \Encore\Admin\Grid\Displayers\ProgressBar::class,
-            'radio'         => \Encore\Admin\Grid\Displayers\Radio::class,
-            'checkbox'      => \Encore\Admin\Grid\Displayers\Checkbox::class,
-            'orderable'     => \Encore\Admin\Grid\Displayers\Orderable::class,
+            'editable'      => \RodrigoButta\Admin\Grid\Displayers\Editable::class,
+            'switch'        => \RodrigoButta\Admin\Grid\Displayers\SwitchDisplay::class,
+            'switchGroup'   => \RodrigoButta\Admin\Grid\Displayers\SwitchGroup::class,
+            'select'        => \RodrigoButta\Admin\Grid\Displayers\Select::class,
+            'image'         => \RodrigoButta\Admin\Grid\Displayers\Image::class,
+            'label'         => \RodrigoButta\Admin\Grid\Displayers\Label::class,
+            'button'        => \RodrigoButta\Admin\Grid\Displayers\Button::class,
+            'link'          => \RodrigoButta\Admin\Grid\Displayers\Link::class,
+            'badge'         => \RodrigoButta\Admin\Grid\Displayers\Badge::class,
+            'progressBar'   => \RodrigoButta\Admin\Grid\Displayers\ProgressBar::class,
+            'radio'         => \RodrigoButta\Admin\Grid\Displayers\Radio::class,
+            'checkbox'      => \RodrigoButta\Admin\Grid\Displayers\Checkbox::class,
+            'orderable'     => \RodrigoButta\Admin\Grid\Displayers\Orderable::class,
         ];
 
         foreach ($map as $abstract => $class) {

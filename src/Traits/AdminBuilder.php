@@ -1,10 +1,10 @@
 <?php
 
-namespace Encore\Admin\Traits;
+namespace RodrigoButta\Admin\Traits;
 
-use Encore\Admin\Form;
-use Encore\Admin\Grid;
-use Encore\Admin\Tree;
+use RodrigoButta\Admin\Form;
+use RodrigoButta\Admin\Grid;
+use RodrigoButta\Admin\Tree;
 
 trait AdminBuilder
 {

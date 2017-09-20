@@ -1,12 +1,12 @@
 <?php
 
-namespace Encore\Admin\Controllers;
+namespace RodrigoButta\Admin\Controllers;
 
-use Encore\Admin\Auth\Database\Administrator;
-use Encore\Admin\Auth\Database\OperationLog;
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Grid;
-use Encore\Admin\Layout\Content;
+use RodrigoButta\Admin\Auth\Database\Administrator;
+use RodrigoButta\Admin\Auth\Database\OperationLog;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Grid;
+use RodrigoButta\Admin\Layout\Content;
 use Illuminate\Routing\Controller;
 
 class LogController extends Controller

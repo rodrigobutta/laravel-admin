@@ -1,13 +1,13 @@
 <?php
 
-namespace Encore\Admin\Grid\Filter\Field;
+namespace RodrigoButta\Admin\Grid\Filter\Field;
 
-use Encore\Admin\Admin;
+use RodrigoButta\Admin\Admin;
 
 class DateTime
 {
     /**
-     * @var \Encore\Admin\Grid\Filter\AbstractFilter
+     * @var \RodrigoButta\Admin\Grid\Filter\AbstractFilter
      */
     protected $filter;
 

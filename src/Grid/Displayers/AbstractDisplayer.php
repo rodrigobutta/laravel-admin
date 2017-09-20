@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Grid\Displayers;
+namespace RodrigoButta\Admin\Grid\Displayers;
 
-use Encore\Admin\Grid;
-use Encore\Admin\Grid\Column;
+use RodrigoButta\Admin\Grid;
+use RodrigoButta\Admin\Grid\Column;
 
 abstract class AbstractDisplayer
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Middleware;
+namespace RodrigoButta\Admin\Middleware;
 
-use Encore\Admin\Auth\Database\OperationLog as OperationLogModel;
-use Encore\Admin\Facades\Admin;
+use RodrigoButta\Admin\Auth\Database\OperationLog as OperationLogModel;
+use RodrigoButta\Admin\Facades\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Form\Field;
+namespace RodrigoButta\Admin\Form\Field;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Form\Field;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Form\Field;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Str;
 

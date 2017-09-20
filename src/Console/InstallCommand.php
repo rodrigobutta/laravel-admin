@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Console;
+namespace RodrigoButta\Admin\Console;
 
-use Encore\Admin\Auth\Database\Administrator;
+use RodrigoButta\Admin\Auth\Database\Administrator;
 use Illuminate\Console\Command;
 
 class InstallCommand extends Command
@@ -50,7 +50,7 @@ class InstallCommand extends Command
         $this->call('migrate');
 
         if (Administrator::count() == 0) {
-            $this->call('db:seed', ['--class' => \Encore\Admin\Auth\Database\AdminTablesSeeder::class]);
+            $this->call('db:seed', ['--class' => \RodrigoButta\Admin\Auth\Database\AdminTablesSeeder::class]);
         }
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Form;
+namespace RodrigoButta\Admin\Form;
 
-use Encore\Admin\Form;
+use RodrigoButta\Admin\Form;
 use Illuminate\Support\Collection;
 
 /**

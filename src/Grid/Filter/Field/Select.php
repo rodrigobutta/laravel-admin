@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Grid\Filter\Field;
+namespace RodrigoButta\Admin\Grid\Filter\Field;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Grid\Filter\AbstractFilter;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Grid\Filter\AbstractFilter;
 use Illuminate\Contracts\Support\Arrayable;
 
 class Select
@@ -176,7 +176,7 @@ $(document).on('change', ".{$this->getClass($column)}", function () {
                 text : item.$textField
             }));
         });
-        
+
         $(target).trigger('change');
     });
 });

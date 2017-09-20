@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Grid\Filter;
+namespace RodrigoButta\Admin\Grid\Filter;
 
 class In extends AbstractFilter
 {

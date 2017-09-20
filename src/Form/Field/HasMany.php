@@ -1,11 +1,11 @@
 <?php
 
-namespace Encore\Admin\Form\Field;
+namespace RodrigoButta\Admin\Form\Field;
 
-use Encore\Admin\Admin;
-use Encore\Admin\Form;
-use Encore\Admin\Form\Field;
-use Encore\Admin\Form\NestedForm;
+use RodrigoButta\Admin\Admin;
+use RodrigoButta\Admin\Form;
+use RodrigoButta\Admin\Form\Field;
+use RodrigoButta\Admin\Form\NestedForm;
 use Illuminate\Database\Eloquent\Relations\HasMany as Relation;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Validator;
@@ -469,7 +469,7 @@ if ($('.has-error').length) {
         var tabId = '#'+$(this).attr('id');
         $('li a[href="'+tabId+'"] i').removeClass('hide');
     });
-    
+
     var first = $('.has-error:first').parent().attr('id');
     $('li a[href="#'+first+'"]').tab('show');
 }

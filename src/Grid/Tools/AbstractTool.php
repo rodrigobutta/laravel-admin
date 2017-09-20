@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Grid\Tools;
+namespace RodrigoButta\Admin\Grid\Tools;
 
-use Encore\Admin\Grid;
+use RodrigoButta\Admin\Grid;
 use Illuminate\Contracts\Support\Renderable;
 
 abstract class AbstractTool implements Renderable

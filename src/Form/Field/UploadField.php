@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Form\Field;
+namespace RodrigoButta\Admin\Form\Field;
 
-use Encore\Admin\Form;
+use RodrigoButta\Admin\Form;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\MessageBag;

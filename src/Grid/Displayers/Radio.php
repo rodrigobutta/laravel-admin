@@ -1,8 +1,8 @@
 <?php
 
-namespace Encore\Admin\Grid\Displayers;
+namespace RodrigoButta\Admin\Grid\Displayers;
 
-use Encore\Admin\Admin;
+use RodrigoButta\Admin\Admin;
 
 class Radio extends AbstractDisplayer
 {

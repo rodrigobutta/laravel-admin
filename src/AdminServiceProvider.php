@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin;
+namespace RodrigoButta\Admin;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -10,11 +10,11 @@ class AdminServiceProvider extends ServiceProvider
      * @var array
      */
     protected $commands = [
-        'Encore\Admin\Console\MakeCommand',
-        'Encore\Admin\Console\MenuCommand',
-        'Encore\Admin\Console\InstallCommand',
-        'Encore\Admin\Console\UninstallCommand',
-        'Encore\Admin\Console\ImportCommand',
+        'RodrigoButta\Admin\Console\MakeCommand',
+        'RodrigoButta\Admin\Console\MenuCommand',
+        'RodrigoButta\Admin\Console\InstallCommand',
+        'RodrigoButta\Admin\Console\UninstallCommand',
+        'RodrigoButta\Admin\Console\ImportCommand',
     ];
 
     /**
@@ -23,11 +23,11 @@ class AdminServiceProvider extends ServiceProvider
      * @var array
      */
     protected $routeMiddleware = [
-        'admin.auth'        => \Encore\Admin\Middleware\Authenticate::class,
-        'admin.pjax'        => \Encore\Admin\Middleware\Pjax::class,
-        'admin.log'         => \Encore\Admin\Middleware\LogOperation::class,
-        'admin.permission'  => \Encore\Admin\Middleware\Permission::class,
-        'admin.bootstrap'   => \Encore\Admin\Middleware\Bootstrap::class,
+        'admin.auth'        => \RodrigoButta\Admin\Middleware\Authenticate::class,
+        'admin.pjax'        => \RodrigoButta\Admin\Middleware\Pjax::class,
+        'admin.log'         => \RodrigoButta\Admin\Middleware\LogOperation::class,
+        'admin.permission'  => \RodrigoButta\Admin\Middleware\Permission::class,
+        'admin.bootstrap'   => \RodrigoButta\Admin\Middleware\Bootstrap::class,
     ];
 
     /**

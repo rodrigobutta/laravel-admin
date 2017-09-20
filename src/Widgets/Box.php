@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\Admin\Widgets;
+namespace RodrigoButta\Admin\Widgets;
 
 use Illuminate\Contracts\Support\Renderable;
 

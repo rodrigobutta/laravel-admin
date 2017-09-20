@@ -1,16 +1,16 @@
 <?php
 
-namespace Encore\Admin\Controllers;
+namespace RodrigoButta\Admin\Controllers;
 
-use Encore\Admin\Auth\Database\Menu;
-use Encore\Admin\Auth\Database\Role;
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Form;
-use Encore\Admin\Layout\Column;
-use Encore\Admin\Layout\Content;
-use Encore\Admin\Layout\Row;
-use Encore\Admin\Tree;
-use Encore\Admin\Widgets\Box;
+use RodrigoButta\Admin\Auth\Database\Menu;
+use RodrigoButta\Admin\Auth\Database\Role;
+use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Form;
+use RodrigoButta\Admin\Layout\Column;
+use RodrigoButta\Admin\Layout\Content;
+use RodrigoButta\Admin\Layout\Row;
+use RodrigoButta\Admin\Tree;
+use RodrigoButta\Admin\Widgets\Box;
 use Illuminate\Routing\Controller;
 
 class MenuController extends Controller
@@ -32,7 +32,7 @@ class MenuController extends Controller
                 $row->column(6, $this->treeView()->render());
 
                 $row->column(6, function (Column $column) {
-                    $form = new \Encore\Admin\Widgets\Form();
+                    $form = new \RodrigoButta\Admin\Widgets\Form();
                     $form->action(admin_base_path('auth/menu'));
 
                     $form->select('parent_id', trans('admin.parent_id'))->options(Menu::selectOptions());
@@ -60,7 +60,7 @@ class MenuController extends Controller
     }
 
     /**
-     * @return \Encore\Admin\Tree
+     * @return \RodrigoButta\Admin\Tree
      */
     protected function treeView()
     {

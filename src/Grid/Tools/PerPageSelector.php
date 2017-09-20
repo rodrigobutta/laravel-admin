@@ -1,9 +1,9 @@
 <?php
 
-namespace Encore\Admin\Grid\Tools;
+namespace RodrigoButta\Admin\Grid\Tools;
 
-use Encore\Admin\Admin;
-use Encore\Admin\Grid;
+use RodrigoButta\Admin\Admin;
+use RodrigoButta\Admin\Grid;
 
 class PerPageSelector extends AbstractTool
 {
