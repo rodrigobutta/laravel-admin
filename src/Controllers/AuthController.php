@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
+use RodrigoButta\Admin\Widgets\Tab;
+
 class AuthController extends Controller
 {
     /**
@@ -78,7 +80,21 @@ class AuthController extends Controller
     {
         return Admin::content(function (Content $content) {
             $content->header(trans('admin.user_setting'));
-            $content->body($this->settingForm()->edit(Admin::user()->id));
+
+            $form = $this->settingForm()->edit(Admin::user()->id);
+
+
+
+            // $tab = new Tab();
+
+            // $tab->add('Pie', $form);
+            // $tab->add('Table', 'asdsadas');
+            // $tab->add('Text', 'blablablabla....');
+
+            // $content->body($tab->render());
+
+
+            $content->body($form);
         });
     }
 
@@ -99,10 +115,12 @@ class AuthController extends Controller
      */
     protected function settingForm()
     {
+
         return Administrator::form(function (Form $form) {
+
             $form->display('username', trans('admin.username'));
             $form->text('name', trans('admin.name'))->rules('required');
-            $form->image('avatar', trans('admin.avatar'));
+            $form->image('avatar', trans('admin.avatar'))->uniqueName();
             $form->password('password', trans('admin.password'))->rules('confirmed|required');
             $form->password('password_confirmation', trans('admin.password_confirmation'))->rules('required')
                 ->default(function ($form) {

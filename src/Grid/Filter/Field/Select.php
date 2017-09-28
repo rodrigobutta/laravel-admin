@@ -1,10 +1,12 @@
 <?php
-namespace RodrigoButta\Admin\Grid\Filter\Presenter;
+
+namespace RodrigoButta\Admin\Grid\Filter\Field;
 
 use RodrigoButta\Admin\Facades\Admin;
+use RodrigoButta\Admin\Grid\Filter\AbstractFilter;
 use Illuminate\Contracts\Support\Arrayable;
 
-class Select extends Presenter
+class Select
 {
     /**
      * Options of select.
@@ -12,6 +14,11 @@ class Select extends Presenter
      * @var array
      */
     protected $options = [];
+
+    /**
+     * @var AbstractFilter
+     */
+    protected $parent;
 
     /**
      * Select constructor.
@@ -24,11 +31,21 @@ class Select extends Presenter
     }
 
     /**
+     * Set parent filter.
+     *
+     * @param AbstractFilter $filter
+     */
+    public function setParent(AbstractFilter $filter)
+    {
+        $this->parent = $filter;
+    }
+
+    /**
      * Build options.
      *
      * @return array
      */
-    protected function buildOptions() : array
+    protected function buildOptions()
     {
         if (is_string($this->options)) {
             $this->loadAjaxOptions($this->options);
@@ -37,7 +54,7 @@ class Select extends Presenter
         }
 
         if ($this->options instanceof \Closure) {
-            $this->options = $this->options->call($this->filter, $this->filter->getValue());
+            $this->options = $this->options->call($this->parent, $this->parent->getValue());
         }
 
         if ($this->options instanceof Arrayable) {
@@ -109,7 +126,7 @@ EOT;
     /**
      * @return array
      */
-    public function variables() : array
+    public function variables()
     {
         return [
             'options' => $this->buildOptions(),
@@ -120,9 +137,17 @@ EOT;
     /**
      * @return string
      */
-    protected function getElementClass() : string
+    protected function getElementClass()
     {
-        return str_replace('.', '_', $this->filter->getColumn());
+        return str_replace('.', '_', $this->parent->getColumn());
+    }
+
+    /**
+     * @return string
+     */
+    public function name()
+    {
+        return 'select';
     }
 
     /**
@@ -135,9 +160,9 @@ EOT;
      *
      * @return $this
      */
-    public function load($target, $resourceUrl, $idField = 'id', $textField = 'text') : Select
+    public function load($target, $resourceUrl, $idField = 'id', $textField = 'text')
     {
-        $column = $this->filter->getColumn();
+        $column = $this->parent->getColumn();
 
         $script = <<<EOT
 
@@ -169,7 +194,7 @@ EOT;
      *
      * @return mixed
      */
-    protected function getClass($target) : string
+    protected function getClass($target)
     {
         return str_replace('.', '_', $target);
     }

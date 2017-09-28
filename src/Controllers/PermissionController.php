@@ -10,9 +10,11 @@ use RodrigoButta\Admin\Layout\Content;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
 
+use RodrigoButta\Admin\Traits\ResourceDispatcherTrait;
+
 class PermissionController extends Controller
 {
-    use ModelForm;
+    use ResourceDispatcherTrait;
 
     /**
      * Index interface.
@@ -117,7 +119,7 @@ class PermissionController extends Controller
 
             $form->multipleSelect('http_method', trans('admin.http.method'))
                 ->options($this->getHttpMethodsOptions())
-                ->help('不选择默认为所有权限');
+                ->help('ayudita reb');
             $form->textarea('http_path', trans('admin.http.path'));
 
             $form->display('created_at', trans('admin.created_at'));

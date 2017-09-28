@@ -13,9 +13,11 @@ use RodrigoButta\Admin\Tree;
 use RodrigoButta\Admin\Widgets\Box;
 use Illuminate\Routing\Controller;
 
+use RodrigoButta\Admin\Traits\ResourceDispatcherTrait;
+
 class MenuController extends Controller
 {
-    use ModelForm;
+    use ResourceDispatcherTrait;
 
     /**
      * Index interface.

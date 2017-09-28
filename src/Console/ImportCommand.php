@@ -30,6 +30,9 @@ class ImportCommand extends Command
     {
         $extension = $this->argument('extension');
 
+        $this->info("rodri");
+
+
         if (empty($extension) || !array_has(Admin::$extensions, $extension)) {
             $extension = $this->choice('Please choose a extension to import', array_keys(Admin::$extensions));
         }
