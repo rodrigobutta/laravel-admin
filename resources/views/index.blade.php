@@ -59,6 +59,9 @@
     <script src="{{ admin_asset ("/vendor/laravel-admin/jquery-pjax/jquery.pjax.js") }}"></script>
     <script src="{{ admin_asset ("/vendor/laravel-admin/nprogress/nprogress.js") }}"></script>
 
+    {{-- necesario para que todo ajax tenga su token en el header --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -87,6 +90,13 @@
 <script>
     function LA() {}
     LA.token = "{{ csrf_token() }}";
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
 </script>
 
 <!-- REQUIRED JS SCRIPTS -->
