@@ -488,7 +488,6 @@ class Form extends Dispatchable
      */
     public function update($id)
     {
-        \Debugbar::info("Form -> update()");
 
         $data = Input::all();
 
